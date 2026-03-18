@@ -1,8 +1,8 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Esconde a barra de rolagem (scrollbar-hide) usada nos bot�es de categoria */
+/* Esconde a barra de rolagem (scrollbar-hide) usada nos botões de categoria */
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }
