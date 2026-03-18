@@ -1,5 +1,5 @@
 ﻿import React, { useState, useMemo } from 'react';
-import { Search, MapPin, Phone, Instagram, Briefcase, Scissors, Heart, Utensils, Home, Hammer, Truck, Wrench, Zap, Monitor, Calendar, Cake, BookOpen, Settings } from 'lucide-react';
+import { Search, MapPin, Phone, Instagram, Briefcase, Scissors, Heart, Utensils, Home, Hammer, Truck, Wrench, Zap, Monitor, Calendar, BookOpen, Settings, GraduationCap, Landmark } from 'lucide-react';
 
 // O "Banco de Dados" estático. Para adicionar alguém, basta copiar um bloco e alterar os dados.
 const db = [
@@ -160,6 +160,47 @@ const db = [
         displayPhone: "(54) 99180-8378",
         instagram: "dindapaulatortasedoces",
         description: "Tortas e doces caseiros feitos com carinho. Para aniversários, festas ou final de semana.",
+    },
+    {
+        id: 20,
+        category: "Assistência",
+        name: "Paulo guinchos",
+        phone: "54999510263",
+        displayPhone: "(54) 99951-0263",
+        description: "Guincho leve e pesado.",
+    },
+    {
+        id: 21,
+        category: "Alimentação",
+        name: "Vó Vani",
+        phone: "54991960615",
+        displayPhone: "(54) 99196-0615",
+        description: "Doces e Salgados.",
+    },
+    {
+        id: 22,
+        category: "Educação",
+        name: "Escola de Educação infantil Divertidamente",
+        phone: "54991309472",
+        displayPhone: "(54) 99130-9372",
+        description: "Educação infantil.",
+    },
+    {
+        id: 23,
+        category: "Alimentação",
+        name: "Sophia Goumert",
+        phone: "54992550516",
+        displayPhone: "(54) 99255-0516",
+        instagram: "sophia.goumert",
+        description: "Pudim gelado e tortas.",
+    },
+    {
+        id: 24,
+        category: "Financeiro",
+        name: "Consultora de crédito Jaquelie Santos",
+        phone: "55991164581",
+        displayPhone: "(55) 99116-4581",
+        description: "Empréstimo com saldo FGTS, Empréstimo bolsa fámilia, Empréstimo na conta de Energia, Empréstimo Aposentados e Pensionistas, Empréstimo CLT.",
     }
 ];
 
@@ -176,16 +217,17 @@ const categoryConfig = {
     "Personalização": <Briefcase size={18} />,
     "Consultoria": <Zap size={18} />,
     "Tecnologia": <Monitor size={18} />,
-    "Eventos": <Calendar size={18} />
+    "Eventos": <Calendar size={18} />,
+    "Educação": <GraduationCap size={18} />, // Ícone de Educação
+    "Financeiro": <Landmark size={18} />     // Ícone de Financeiro
 };
 
 export default function App() {
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("Todas");
 
-    // Primeiro pegamos as categorias do banco e ordenamos alfabeticamente
+    // Pega nas categorias, ordena alfabeticamente e garante que "Todas" é a primeira
     const uniqueCategories = [...new Set(db.map(item => item.category))].sort();
-    // Depois, forçamos o "Todas" a ser sempre o primeiro item da lista
     const categories = ["Todas", ...uniqueCategories];
 
     // Filtra os dados com base na busca e na categoria selecionada
@@ -239,7 +281,7 @@ export default function App() {
             </header>
 
             <main className="max-w-4xl mx-auto px-4 py-6">
-                {/* Filtros de Categoria - Removemos o 'scrollbar-hide' para a barra aparecer */}
+                {/* Filtros de Categoria (Barra de rolagem ativada) */}
                 <div className="flex overflow-x-auto pb-4 mb-4 gap-2">
                     {categories.map(cat => (
                         <button
