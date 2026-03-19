@@ -220,6 +220,15 @@ const db = [
         displayPhone: "(54) 99671-9021",
         instagram: "trufasecaseirinhos.da.ro",
         description: "As Trufas da Rô feitas com chocolate Nobre Premium e recheios 100% caseiros, cada trufa nasce de um processo artesanal, onde o cuidado e o amor são os ingredientes principais.",
+    },
+    {
+        id: 27,
+        category: "Personalização",
+        name: "Essência Sob Medida ",
+        phone: "54997009605",
+        displayPhone: "(54) 99700-9605",
+        instagram: "essenciasobbmedida",
+        description: "Ateliê de costura, Reformas em Geral e Roupas Sob Medidas.",
     }
 ];
 
