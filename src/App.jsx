@@ -198,7 +198,7 @@ const db = [
     {
         id: 24,
         category: "Financeiro",
-        name: "Consultora de Crédito Jaquelie Santos",
+        name: "Consultora de Crédito Jaqueline Santos",
         phone: "55991164581",
         displayPhone: "(55) 99116-4581",
         description: "Empréstimo com saldo FGTS, Empréstimo bolsa fámilia, Empréstimo na conta de Energia, Empréstimo Aposentados e Pensionistas, Empréstimo CLT.",
