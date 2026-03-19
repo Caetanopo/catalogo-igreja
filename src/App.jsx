@@ -109,6 +109,7 @@ const db = [
         name: "Luizinho das Máquinas",
         phone: "54999153353",
         displayPhone: "(54) 99915-3353",
+        instagram: "luizinho.maquinas",
         description: "Conserto de máquinas de lavar, secadoras e refrigeração.",
     },
     {
@@ -191,16 +192,34 @@ const db = [
         name: "Sophia Goumert",
         phone: "54992550516",
         displayPhone: "(54) 99255-0516",
-        instagram: "sophia.goumert",
+        instagram: "sophia.gourmet",
         description: "Pudim gelado e tortas.",
     },
     {
         id: 24,
         category: "Financeiro",
-        name: "Consultora de crédito Jaquelie Santos",
+        name: "Consultora de Crédito Jaquelie Santos",
         phone: "55991164581",
         displayPhone: "(55) 99116-4581",
         description: "Empréstimo com saldo FGTS, Empréstimo bolsa fámilia, Empréstimo na conta de Energia, Empréstimo Aposentados e Pensionistas, Empréstimo CLT.",
+    },
+    {
+        id: 25,
+        category: "Beleza & Estética",
+        name: "Rô Treméa Nails Design ",
+        phone: "5554996719021",
+        displayPhone: "(54) 99671-9021",
+        instagram: "rotremeanailsdesign",
+        description: "Manicure e pedicure tradicional, Esmaltação em gel, Alongamento em gel, Banho em gel, Biossegurança e produtos completamente testados pela Anvisa"
+    },
+    {
+        id: 26,
+        category: "Alimentação",
+        name: "Trufas da Rô",
+        phone: "5554996719021",
+        displayPhone: "(54) 99671-9021",
+        instagram: "trufasecaseirinhos.da.ro",
+        description: "As Trufas da Rô feitas com chocolate Nobre Premium e recheios 100% caseiros, cada trufa nasce de um processo artesanal, onde o cuidado e o amor são os ingredientes principais.",
     }
 ];
 
@@ -288,8 +307,8 @@ export default function App() {
                             key={cat}
                             onClick={() => setSelectedCategory(cat)}
                             className={`flex items-center gap-2 whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === cat
-                                    ? 'bg-[#7a0010] text-[#f9d976] shadow-md border border-[#5c000c]'
-                                    : 'bg-white text-slate-600 border border-slate-200 hover:bg-[#fff9e6] hover:text-[#7a0010] hover:border-[#d4af37]/30'
+                                ? 'bg-[#7a0010] text-[#f9d976] shadow-md border border-[#5c000c]'
+                                : 'bg-white text-slate-600 border border-slate-200 hover:bg-[#fff9e6] hover:text-[#7a0010] hover:border-[#d4af37]/30'
                                 }`}
                         >
                             {categoryConfig[cat] || <Briefcase size={16} />}
