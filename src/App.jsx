@@ -229,6 +229,15 @@ const db = [
         displayPhone: "(54) 99700-9605",
         instagram: "essenciasobbmedida",
         description: "Ateliê de costura, Reformas em Geral e Roupas Sob Medidas.",
+    },
+    {
+        id: 28,
+        category: "Alimentação",
+        name: "G&R Doces",
+        phone: "5554991658946",
+        displayPhone: "(54) 99165-8946",
+        instagram: "@dooces_g.r",
+        description: "Transformando momentos em experiências doces e inesquecíveis! O que oferecemos: Variedade de doces em kits, Sobremesas à pronta entrega, Encomendas personalizadas",
     }
 ];
 
